@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Charles SSL proxy: trust user-installed CAs in debug builds only.
+  https://developers.google.com/admob/android/charles#enable_ssl_proxy_for_your_mobile_app
+-->
+<network-security-config>
+  <debug-overrides>
+    <trust-anchors>
+      <!-- Trust user added CAs while debuggable only -->
+      <certificates src="user" />
+    </trust-anchors>
+  </debug-overrides>
+</network-security-config>
